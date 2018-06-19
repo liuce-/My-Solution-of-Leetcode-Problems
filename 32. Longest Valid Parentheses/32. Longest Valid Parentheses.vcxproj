@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{068BE3A9-74DE-4EEB-827D-C2220DC7B24F}</ProjectGuid>
-    <RootNamespace>My31NextPermutation</RootNamespace>
+    <ProjectGuid>{60C7D5FA-0055-4379-82F2-778D54692ADE}</ProjectGuid>
+    <RootNamespace>My32LongestValidParentheses</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
