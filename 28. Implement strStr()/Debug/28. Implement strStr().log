@@ -1,0 +1,7 @@
+﻿  源.cpp
+c:\users\liuce\documents\代码\vsproject\leetcode\28. implement strstr()\源.cpp(31): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\liuce\documents\代码\vsproject\leetcode\28. implement strstr()\源.cpp(34): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\liuce\documents\代码\vsproject\leetcode\28. implement strstr()\源.cpp(35): warning C4018: “>=”: 有符号/无符号不匹配
+c:\users\liuce\documents\代码\vsproject\leetcode\28. implement strstr()\源.cpp(57): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\liuce\documents\代码\vsproject\leetcode\28. implement strstr()\源.cpp(71): warning C4018: “<”: 有符号/无符号不匹配
+  28. Implement strStr().vcxproj -> C:\Users\liuce\Documents\代码\vsproject\leetcode\Debug\28. Implement strStr().exe
