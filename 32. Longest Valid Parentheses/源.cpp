@@ -10,6 +10,7 @@
 //	Input : ")()())"
 //	Output : 4
 //	Explanation : The longest valid parentheses substring is "()()"
+#include<string>
 class Solution {
 public:
 	int longestValidParentheses(string s) {
