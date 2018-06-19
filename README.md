@@ -1,13 +1,15 @@
 # My Solutions of Leetcode Problems
-##English
+## Summary (in English)
 
 This project contains all my solutions of leetcode problems. The code is written in C++ and organized in  Visual Studio 2017 project. 
+
 The project is still being updated.
 
-##Chinese
+## Summary (in Chinese)
 
-Õâ¸öÏîÄ¿°üÀ¨ÁËÎÒÈ«²¿µÄLeetcode´ğ°¸¡£´úÂëÊÇÓÃC++ÓïÑÔ±àĞ´£¬ÇÒÊÇVisual Studio 2017ÏîÄ¿¡£
-ÏîÄ¿ÈÔÔÚ³ÖĞø¸üĞÂÖĞ¡£¡£¡£
+è¿™ä¸ªé¡¹ç›®åŒ…æ‹¬äº†æˆ‘å…¨éƒ¨çš„Leetcodeç­”æ¡ˆã€‚ä»£ç æ˜¯ç”¨C++è¯­è¨€ç¼–å†™ï¼Œä¸”æ˜¯Visual Studio 2017é¡¹ç›®ã€‚ 
+
+é¡¹ç›®ä»åœ¨æŒç»­æ›´æ–°ä¸­ã€‚ã€‚ã€‚
 
 
 
