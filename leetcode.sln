@@ -243,6 +243,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "36. Valid Sudoku", "36. Val
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "38. Count and Say", "38. Count and Say\38. Count and Say.vcxproj", "{20F8B95B-760D-4216-83A6-82735AC10880}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "41. First Missing Positive", "41. First Missing Positive\41. First Missing Positive.vcxproj", "{086CA94F-26B6-4BBB-88A4-2958E0DB2209}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "42. Trapping Rain Water", "42. Trapping Rain Water\42. Trapping Rain Water.vcxproj", "{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1187,6 +1191,22 @@ Global
 		{20F8B95B-760D-4216-83A6-82735AC10880}.Release|x64.Build.0 = Release|x64
 		{20F8B95B-760D-4216-83A6-82735AC10880}.Release|x86.ActiveCfg = Release|Win32
 		{20F8B95B-760D-4216-83A6-82735AC10880}.Release|x86.Build.0 = Release|Win32
+		{086CA94F-26B6-4BBB-88A4-2958E0DB2209}.Debug|x64.ActiveCfg = Debug|x64
+		{086CA94F-26B6-4BBB-88A4-2958E0DB2209}.Debug|x64.Build.0 = Debug|x64
+		{086CA94F-26B6-4BBB-88A4-2958E0DB2209}.Debug|x86.ActiveCfg = Debug|Win32
+		{086CA94F-26B6-4BBB-88A4-2958E0DB2209}.Debug|x86.Build.0 = Debug|Win32
+		{086CA94F-26B6-4BBB-88A4-2958E0DB2209}.Release|x64.ActiveCfg = Release|x64
+		{086CA94F-26B6-4BBB-88A4-2958E0DB2209}.Release|x64.Build.0 = Release|x64
+		{086CA94F-26B6-4BBB-88A4-2958E0DB2209}.Release|x86.ActiveCfg = Release|Win32
+		{086CA94F-26B6-4BBB-88A4-2958E0DB2209}.Release|x86.Build.0 = Release|Win32
+		{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}.Debug|x64.ActiveCfg = Debug|x64
+		{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}.Debug|x64.Build.0 = Debug|x64
+		{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}.Debug|x86.ActiveCfg = Debug|Win32
+		{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}.Debug|x86.Build.0 = Debug|Win32
+		{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}.Release|x64.ActiveCfg = Release|x64
+		{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}.Release|x64.Build.0 = Release|x64
+		{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}.Release|x86.ActiveCfg = Release|Win32
+		{DB7715E9-FAC1-4FFB-B68D-C304EFCAC656}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
