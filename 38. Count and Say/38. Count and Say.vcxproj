@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{ED481CA6-3D82-4992-8341-05C228F8D877}</ProjectGuid>
-    <RootNamespace>My34SearchforaRange</RootNamespace>
+    <ProjectGuid>{20F8B95B-760D-4216-83A6-82735AC10880}</ProjectGuid>
+    <RootNamespace>My38CountandSay</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

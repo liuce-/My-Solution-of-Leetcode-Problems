@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{ED481CA6-3D82-4992-8341-05C228F8D877}</ProjectGuid>
-    <RootNamespace>My34SearchforaRange</RootNamespace>
+    <ProjectGuid>{EDD89E53-7BAC-4FFE-8753-E2F1BA5EBBCD}</ProjectGuid>
+    <RootNamespace>My36ValidSudoku</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
