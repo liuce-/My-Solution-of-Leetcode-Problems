@@ -78,20 +78,13 @@ public:
 		for (int i = 0; i < v2.size(); i++) {
 			long long int contribute = 0;
 			for (int j = 0; j < v1.size(); j++) {
-				long long int res = (long long int)v1[j] * (long long int)v2[i] + contribute;
+				long long int res = (long long int)v1[j] * (long long int)v2[i] + contribute + (long long int)ans[i + j];
 				contribute = 0;
 				if (res > BASE) {
 					contribute = res / BASE;
 					res = res % BASE;
 				}
-
-				res += (long long int)ans[i + j];
-				if (res >= BASE) {
-					ans[i + j] = res % BASE;
-					ans[i + j + 1] += res / BASE;//may over BASE
-				}
-				else
-					ans[i + j] = res;
+				ans[i + j] = res;
 			}
 			if (contribute != 0) {
 				ans[i + v1.size()] += contribute;
