@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{77126BF5-6A52-4C9F-8D8F-B083A2DF5999}</ProjectGuid>
-    <RootNamespace>My55JumpGame</RootNamespace>
+    <ProjectGuid>{DB5290DE-F06C-4110-A6B1-8420354E0FA9}</ProjectGuid>
+    <RootNamespace>My65ValidNumber</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -116,6 +116,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="源.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Valid number pics.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

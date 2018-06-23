@@ -13,6 +13,7 @@
 //	Explanation : Because the new interval[4, 8] overlaps with[3, 5], [6, 7], [8, 10].
 
 #include<vector>
+#include<algorithm>
 using namespace std;
  struct Interval {
      int start;
@@ -24,6 +25,36 @@ using namespace std;
 class Solution {
 public:
 	vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
-
+		vector<Interval> res;
+		if (intervals.size() == 0) {
+			res.push_back(newInterval);
+		}
+		else if (intervals.back().end < newInterval.start) {
+			res = intervals;
+			res.push_back(newInterval);
+		}
+		else {
+			int i = 0;
+			while (i< intervals.size() && intervals[i].end < newInterval.start) i++;
+			res = vector<Interval>(intervals.begin(), intervals.begin() + i); 
+			if (intervals[i].start > newInterval.end) {
+				res.push_back(newInterval);
+				res.insert(res.end(), intervals.begin() + i, intervals.end());
+			}
+			else {
+				intervals[i].start = min(newInterval.start, intervals[i].start);
+				intervals[i].end = max(newInterval.end, intervals[i].end);
+				int j = i + 1;
+				while (j < intervals.size() && intervals[i].end >= intervals[j].start) {
+					intervals[i].end = max(intervals[j].end, intervals[i].end);
+					j++;
+				}
+				res.push_back(intervals[i]);
+				for (; j < intervals.size(); j++)
+					res.push_back(intervals[j]);
+			}
+		}
+		return res;
+		
 	}
 };
