@@ -21,7 +21,7 @@
 #include<unordered_map>
 #include<set>
 using namespace std;
-//Time Limit Execeeded, O(n^3) time, O(n) space
+//Time Limit Exceeded, O(n^3) time, O(n) space
 class Solution {
 public:
 	int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {

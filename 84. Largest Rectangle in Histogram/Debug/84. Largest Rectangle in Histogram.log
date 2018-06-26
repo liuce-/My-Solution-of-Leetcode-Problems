@@ -1,0 +1,5 @@
+﻿  源.cpp
+c:\users\liuce\documents\代码\vsproject\leetcode\84. largest rectangle in histogram\源.cpp(25): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\liuce\documents\代码\vsproject\leetcode\84. largest rectangle in histogram\源.cpp(27): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\liuce\documents\代码\vsproject\leetcode\84. largest rectangle in histogram\源.cpp(43): warning C4018: “<”: 有符号/无符号不匹配
+  84. Largest Rectangle in Histogram.vcxproj -> C:\Users\liuce\Documents\代码\vsproject\leetcode\Debug\84. Largest Rectangle in Histogram.exe
