@@ -17,7 +17,28 @@
 #include<string>
 #include<vector>
 using namespace std;
-
+//dp 
+class Solution {
+	vector<vector<bool>> dp;
+public:
+	string longestPalindrome(string s) {
+		string ans;
+		int max = 1;
+		int start = 0;
+		dp.resize(s.size(), vector<bool>(s.size(), true));
+		for (int i = 0; i < s.size(); i++)
+			dp[i][i] = 1;
+		for (int i = 1; i < s.size(); i++)
+			for (int j = 0; j < s.size() - i; j++) {
+				dp[j][i + j] = s[j] == s[i + j] && dp[j + 1][i + j - 1];
+				if (dp[j][i + j] && i + 1 > max) {
+					max = i + 1;
+					start = j;
+				}
+			}
+		return s.substr(start, max);
+	}
+};
 class Solution {
 	vector<vector<int>> cache;
 	int calPalindrome(string& s, int i, int j) {
