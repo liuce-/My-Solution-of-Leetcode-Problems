@@ -1,8 +1,1 @@
-﻿  源.cpp
-c:\users\liuce\documents\代码\vsproject\leetcode\240. search a 2d matrix ii\源.cpp(42): warning C4018: “<”: 有符号/无符号不匹配
-c:\users\liuce\documents\代码\vsproject\leetcode\240. search a 2d matrix ii\源.cpp(51): warning C4018: “>”: 有符号/无符号不匹配
-c:\users\liuce\documents\代码\vsproject\leetcode\240. search a 2d matrix ii\源.cpp(88): error C2011: “Solution”:“class”类型重定义
-  c:\users\liuce\documents\代码\vsproject\leetcode\240. search a 2d matrix ii\源.cpp(49): note: 参见“Solution”的声明
-c:\users\liuce\documents\代码\vsproject\leetcode\240. search a 2d matrix ii\源.cpp(106): error C2079: “s”使用未定义的 class“Solution”
-c:\users\liuce\documents\代码\vsproject\leetcode\240. search a 2d matrix ii\源.cpp(110): error C2228: “.searchMatrix”的左边必须有类/结构/联合
-  c:\users\liuce\documents\代码\vsproject\leetcode\240. search a 2d matrix ii\源.cpp(110): note: 类型是“int”
+﻿
