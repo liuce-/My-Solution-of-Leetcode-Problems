@@ -36,7 +36,7 @@ public:
 		unordered_map<string, char> map2;
 		int i = 0;
 		while (getline(s, value,' ')) {
-			cout << value << endl;
+			//cout << value << endl;
 			if (i >= pattern.size())
 				return false;
 			if (map.find(pattern[i]) == map.end() && map2.find(value) == map2.end()) {
