@@ -23,33 +23,11 @@ using namespace  std;
 class Solution {
 public:
 	int maximumGap(vector<int>& nums) {
-		if (nums.size() < 2)
-			return 0;
-		int minNumber = nums[0];
-		int maxNumber = nums[0];
-		for (auto i : nums) {
-			minNumber = min(i, minNumber);
-			maxNumber = max(i, maxNumber);
-		}
-
-		for (auto i : nums) {
-			if (i > minNumber && i < maxNumber) {
-				if (i - minNumber > maxNumber - i)
-					maxNumber = i;
-				else
-					minNumber = i;				
-			}
-		}
-		int res = maxNumber - minNumber;
-		for (int i = nums.size() - 1; i >= 0; i--) {
-			if (nums[i] > minNumber && nums[i] < maxNumber) {
-				if (nums[i] - minNumber > maxNumber - nums[i])
-					maxNumber = nums[i];
-				else
-					minNumber = nums[i];
-			}
-		}
-		res = max(res, maxNumber - minNumber);
-		return res;
+		sort(nums.begin(), nums.end());
+		int maxGap = 0;
+		for (int i = 1; i < nums.size(); i++) 
+			maxGap = max(maxGap, nums[i] - nums[i - 1]);
+		return maxGap;
+	
 	}
 };
