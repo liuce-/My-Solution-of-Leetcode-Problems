@@ -41,15 +41,9 @@ public:
 		if (remain != 0) {
 			ans.push_back('.');
 			while (remain != 0) {
-				remain = remain * 10;
-				if (remain%denominator == remain/10) {
-					
-					break;
-				}
-				else {
-					ans.push_back(remain / denominator + '0');
-					remain = remain % denominator;
-				}
+				remain = remain * 10;	
+
+
 			}
 		}
 		return ans;
