@@ -13,6 +13,7 @@
 #include<vector>
 #include<unordered_map>
 using namespace std;
+//o(n) space, o(n) time
 class Solution {
 public:
 	int majorityElement(vector<int>& nums) {
@@ -23,5 +24,27 @@ public:
 			if (i.second > nums.size() / 2)
 				return i.first;
 		}
+	}
+};
+
+//o(1) space, o(1) time;
+//There is only one majority element and this element outnumbers all of the rest element;
+//source:https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution
+class Solution {
+public:
+	int majorityElement(vector<int>& nums) {
+		int majority = nums[0];
+		int count = 0;
+		for (auto i : nums) {
+			if (count == 0) {
+				majority = i;
+				count++;
+			}
+			else if (majority != i)
+				count--;
+			else
+				count++;
+		}
+		return majority;
 	}
 };
