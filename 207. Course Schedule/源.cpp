@@ -20,38 +20,34 @@
 //	also have finished course 1. So it is impossible.
 #include<vector>
 #include<queue>
+#include<list>
 using namespace std;
 class Solution {
-	vector<bool> visited;
-	vector<vector<int>> graph;
-	bool bfs(int source) {
-		queue<int> q;
-		q.push(source);
-		while (q.size() != 0) {
-			int course = q.front();
-			visited[course] = true;
-			q.pop();
-			for (int i = 0; i < graph[course].size(); i++) {
-				if (!visited[graph[course][i]])
-					q.push(graph[course][i]);
-				else
-					return true;
+	enum color{ white,grey,black};
+	vector<color> visited;
+	vector<list<int>> graph;
+	bool dfs(int source) {
+		visited[source] = grey;
+		for (auto i = graph[source].begin(); i != graph[source].end(); i++) {
+			if (visited[*i] == grey)
+				return false;
+			if (visited[*i] == white) {
+				if (!dfs(*i))
+					return false;
 			}
 		}
-		return false;
+		visited[source] = black;
+		return true;
 	}
 public:
 	bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
 		graph.resize(numCourses);
 		for (int i = 0; i < prerequisites.size(); i++)
 			graph[prerequisites[i].second].push_back(prerequisites[i].first);
-		visited.resize(numCourses,false);
+		visited.resize(numCourses,white);
 		for (int i = 0; i < graph.size(); i++) {
-			if (!visited[i]) {
-				for (int j = 0; j < visited.size(); j++)
-					visited[j] = false;
-				bool hasCircle = bfs(i);
-				if (hasCircle)
+			if (visited[i]==white) {
+				if (!dfs(i))
 					return false;
 			}
 		}
