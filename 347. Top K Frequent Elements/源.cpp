@@ -10,40 +10,74 @@
 #include<queue>
 #include<unordered_map>
 using namespace std;
+class MyCompare {
+public:
+	bool operator()(const pair<int, int>& a, const pair<int, int>&b) {
+		return a.second > b.second;
+	}
+};
 
+class BestSolution {
+public:
+	vector<int> topKFrequent(vector<int>& nums, int k) {
+		unordered_map<int, int> frequency;
+		for (auto number : nums)
+			frequency[number]++;
+		vector<list<int>> bucket(nums.size() + 1);
+		for (auto freq : frequency)
+			bucket[freq.second].push_front(freq.first);
+		vector<int> result;
+		for (auto i = bucket.rbegin(); i != bucket.rend(); i++) {
+			result.insert(result.end(), i->begin(), i->end());
+			if (result.size() >= k) {
+				while (result.size() != k)
+					result.pop_back();
+				break;
+			}
+		}
+		return result;
+	}
+};
 class Solution {
 public:
 	vector<int> topKFrequent(vector<int>& nums, int k) {
-		//pair<int,int> first:frequency second,nums;
-		priority_queue<pair<int, int>,vector<pair<int,int>>, greater<pair<int,int>>> q;
-		//int,int first:num, second:frequency
+		unordered_map<int, int> map;
+		for (auto number : nums)
+			map[number]++;
+
+		priority_queue<pair<int, int>, vector<pair<int, int>>, MyCompare> heap;//min heap
+		for (auto i = map.begin(); i != map.end(); i++) {
+			heap.push(*i);
+			if (heap.size() > k)
+				heap.pop();
+		}
+		list<int> result;
+		while (heap.size() != 0) {
+			result.push_front(heap.top().first);
+			heap.pop();
+		}
+		return vector<int>(result.begin(), result.end());
+
+	}
+};
+class BestSolution {
+public:
+	vector<int> topKFrequent(vector<int>& nums, int k) {
 		unordered_map<int, int> frequency;
-		for (int i = 0; i < nums.size(); i++) {
-			if (frequency.find(nums[i]) == frequency.end())
-				frequency[nums[i]] = 1;
-			else
-				frequency[nums[i]]++;
-		}
-		//
-		auto j = frequency.begin();
-		
-		for (int i = 0; i < k; i++) {
-			q.push(make_pair((*j).second, (*j).first));
-			j++;
-		}
-		for (; j != frequency.end(); j++) {
-			if (q.top().first < (*j).second) {
-				q.pop();
-				q.push(make_pair((*j).second, (*j).first));
+		for (auto number : nums)
+			frequency[number]++;
+		vector<list<int>> bucket(nums.size() + 1);
+		for (auto freq : frequency)
+			bucket[freq.second].push_front(freq.first);
+		vector<int> result;
+		for (auto i = bucket.rbegin(); i != bucket.rend(); i++) {
+			result.insert(result.end(), i->begin(), i->end());
+			if (result.size() >= k) {
+				while (result.size() != k)
+					result.pop_back();
+				break;
 			}
 		}
-
-		vector<int> result(k);
-		for (int j = k - 1; j >= 0; j--) {
-			result[j] = q.top().second;
-			q.pop();
-		}
 		return result;
-				
 	}
 };

@@ -33,7 +33,7 @@ public:
 			return 0;
 		}
 		if (n == nums.size() - 1) {
-			result[n][target + shift] = 0;
+			result[n ][target + shift] = 0;
 			if (target == nums[n])
 				result[n][target + shift] += 1;
 			if(target==-nums[n])

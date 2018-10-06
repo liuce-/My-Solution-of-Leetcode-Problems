@@ -31,7 +31,5 @@ public:
 			swap(nums[target], nums[pos]);
 			reverse(nums, pos + 1, nums.size() - 1);
 		}
-
-
 	}
 };

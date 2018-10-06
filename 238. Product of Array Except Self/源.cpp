@@ -12,7 +12,7 @@
 #include<vector>
 using namespace std;
 //with division
-class Solution {
+class Solution1 {
 public:
 	vector<int> productExceptSelf(vector<int>& nums) {
 		int zeroCount = 0;
@@ -42,7 +42,7 @@ public:
 	}
 };
 //without division,O(N) space
-class Solution {
+class Solution2 {
 public:
 	vector<int> productExceptSelf(vector<int>& nums) {
 		vector<int> rightProduct(nums.size(), 1);
@@ -59,7 +59,7 @@ public:
 	}
 };
 //without division, O(1) space
-class Solution {
+class Solution3 {
 public:
 	vector<int> productExceptSelf(vector<int>& nums) {
 		vector<int> ans(nums.size(),1);//rightProduct
@@ -79,3 +79,39 @@ public:
 		return ans;
 	}
 };
+//
+class Solution4 {
+public:
+	vector<int> productExceptSelf(const vector<int>& nums) {
+		vector<int> rightProduct(nums.size());
+		for (int i = nums.size() - 1; i >= 0; i--) {//right product
+			if (i == nums.size() - 1)
+				rightProduct[i] = nums[i];
+			else
+				rightProduct[i] = nums[i] * rightProduct[i + 1];
+		}
+		vector<int> leftProduct(nums.size());
+		for (int i = 0; i < nums.size(); i++) {
+			if (i == 0)
+				leftProduct[i] = nums[0];
+			else
+				leftProduct[i] = leftProduct[i - 1] * nums[i];
+		}
+		vector<int> ans(nums.size());
+		for (int i = 0; i < nums.size(); i++) {
+			if (i == 0)
+				ans[i] = rightProduct[i + 1];
+			else if (i == nums.size() - 1)
+				ans[i] = leftProduct[i - 1];
+			else
+				ans[i] = leftProduct[i - 1] * rightProduct[i + 1];
+		}
+		return ans;
+
+	}
+};
+int main() {
+	Solution4 s;
+	s.productExceptSelf({ 1,2,3,4 });
+	return 0;
+}

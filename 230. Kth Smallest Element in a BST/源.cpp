@@ -24,6 +24,31 @@
  };
 #include<list>
 using namespace std;
+
+class BestSolution {
+	int result = 0;
+	int current = 0;
+	void find(TreeNode* root, int k) {
+		if (root != nullptr) {
+			find(root->left, k);
+			current++;
+			if (current > k)
+				return;
+			if (current == k) {
+				result = root->val;
+			}
+			else {//current < k
+				find(root->right, k);
+			}
+		}
+	}
+public:
+	int kthSmallest(TreeNode* root, int k) {
+		find(root, k);
+		return result;
+	}
+};
+
 class Solution {
 	list<int> l;
 	void convert(TreeNode* root, list<int>::iterator base) {
@@ -82,3 +107,4 @@ public:
 		return result;
 	}
 };
+

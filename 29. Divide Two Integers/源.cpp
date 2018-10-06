@@ -25,6 +25,9 @@ public:
 	int divide(int dividend, int divisor) {
 		long long int ldividend = dividend;
 		long long int ldivisor = divisor;
+		
+		if (divisor == 0)
+			throw "divisor is zero!";
 		ldividend = abs(ldividend);
 		ldivisor = abs(ldivisor);
 		long long int flag = dividend > 0 && divisor > 0 || dividend < 0 && divisor < 0 ? 1 : -1;
@@ -46,5 +49,10 @@ public:
 			return (int)res;
 	}
 };
+int main() {
+	Solution s;
+	s.divide(10, 0);
+	return 0;
+}
 
 //
