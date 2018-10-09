@@ -12,17 +12,6 @@
 using namespace std;
 class Solution {
 public:
-	//vector<int> twoSum(vector<int>& nums, int target) {
-	//	for (vector<int>::iterator i = nums.begin(); i != nums.end()-1; i++) {
-	//		for (vector<int>::iterator j = i+1; j != nums.end(); j++) {
-	//			if (*i + *j == target) {
-	//				return vector<int>{i - nums.begin(), j - nums.begin()};
-	//			}
-	//		}
-	//	}
-	//	return vector<int>(-1);
-	//}220ms
-
 
 	vector<int> twoSum(vector<int>& nums, int target) {
 		int size = nums.size();
@@ -33,7 +22,7 @@ public:
 				}
 			}
 		}
-		return vector<int>(-1);
+		return vector<int>{-1};
 	}//101 ms
 
 	

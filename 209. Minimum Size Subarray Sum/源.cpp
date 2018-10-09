@@ -35,3 +35,38 @@ public:
 		return result==INT_MAX?0:result;
 	}
 };
+//wrong solution, why?
+class Solution {
+public:
+	int minSubArrayLen(int s, vector<int>& nums) {
+		int sum = 0;
+		int left = 0;
+		int right = nums.size() - 1;
+		for (auto i : nums)
+			sum += i;
+
+		if (sum < s)
+			return 0;
+
+		int cur = sum;
+		int length = nums.size();
+		while (left <= right) {//[left,right]
+			if (cur < s)
+				break;
+			else {
+				length = min(length, right - left + 1);
+			}
+			if (nums[left] <= nums[right]) {
+				cur -= nums[left];
+				left++;
+			}
+			else {
+				cur -= nums[right];
+				right--;
+			}
+
+		}
+
+		return length;
+	}
+};

@@ -19,6 +19,7 @@
 #include<string>	
 #include<stack>
 #include<vector>
+#include<list>
 using namespace std;
 class Solution {
 	vector<string> r1{ "","Thousand","Million","Billion" };
@@ -80,8 +81,46 @@ public:
 		return ans;
 	}
 };
+class Solution2 {
+	vector<string> r1{ "","Thousand","Million","Billion" };
+	vector<string> r2{ "","One","Two","Three","Four","Five","Six","Seven","Eight","Nine" };
+	vector<string> r3{ "","Ten","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety" };
+	vector<string> r4{ "Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen" };
+public:
+	string numberToWords(int num) {
+		int index1 = 0;
+		if (num == 0)
+			return "zero";
+		list<string> list;
+		while (num != 0) {
+			int current = num % 1000;
+			num /= 1000;
+			list.push_front(r1[index1++]);
+			if (current % 100 < 20 && current % 100 >= 10) {
+				list.push_front(r4[current % 10]);
+			}
+			else {
+				list.push_front(r2[current % 10]);
+				list.push_front(r3[current % 100 / 10]);
+
+			}
+			current = current / 100;
+			if (current != 0)
+				list.push_front("Hundred");
+
+			list.push_front(r2[current]);
+		}
+		string result;
+		for (auto str : list)
+			if (str != "")
+				result += str + " ";
+		result[result.size() - 1] = 0;
+		return result;
+
+	}
+};
 int main() {
-	Solution s;
-	auto res = s.numberToWords(1000);
+	Solution2 s;
+	auto res = s.numberToWords(463847412);
 	return 0;
 }
