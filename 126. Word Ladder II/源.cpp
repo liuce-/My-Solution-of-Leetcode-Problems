@@ -65,7 +65,7 @@ public:
 			for (int j = i + 1; j < size; j++) {
 				if (diff(wordList[i], wordList[j]) == 1) {
 					graph[j].push_back(i);
-					if (j != size - 1) {
+					if (j != size - 1) {//can not go back to begin word
 						graph[i].push_back(j);}}}}
 
 		int targetLevel = -1;
@@ -85,10 +85,11 @@ public:
 			if (targetLevel != -1 && level > targetLevel)
 				break;
 			else {
-				if (levelOrder.size() - 1 != level)
+				if (levelOrder.size() - 1 != level)//À©³ä
 					levelOrder.push_back(vector<pair<int, int>>());
 				levelOrder[level].push_back(make_pair(index, father));
 			}
+
 			for (int i = 0; i < graph[index].size(); i++) {
 				int next = graph[index][i];
 				if (level + 1 <= visited[next]) {

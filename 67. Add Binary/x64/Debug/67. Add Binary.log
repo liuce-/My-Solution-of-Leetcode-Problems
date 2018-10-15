@@ -1,1 +1,6 @@
-﻿
+﻿  源.cpp
+c:\users\lc453\documents\代码\my-solution-of-leetcode-problems\67. add binary\源.cpp(22): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\lc453\documents\代码\my-solution-of-leetcode-problems\67. add binary\源.cpp(23): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\lc453\documents\代码\my-solution-of-leetcode-problems\67. add binary\源.cpp(54): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\lc453\documents\代码\my-solution-of-leetcode-problems\67. add binary\源.cpp(55): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  67. Add Binary.vcxproj -> C:\Users\lc453\Documents\代码\My-Solution-of-Leetcode-Problems\x64\Debug\67. Add Binary.exe

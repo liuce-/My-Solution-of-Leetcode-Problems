@@ -1,8 +1,16 @@
 //This project is for test purpose only.
 
 #include<iostream>
+#include<unordered_map>
 using namespace std;
 int main() {
+	unordered_map<char, int> map;
+	map['a']++;
+	map['a'] = 0;
+	cout << map.empty();
+	map['b']++;
+	map['b']--;
+	cout << map.empty();
 	
 	for (int i = 0; i < -1; i++) {
 		cout << "asdf" << endl;

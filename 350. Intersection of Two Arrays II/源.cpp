@@ -12,7 +12,26 @@
 //What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once ?
 #include<vector>
 #include<unordered_map>
+#include<algorithm>
 using namespace std;
+
+class Solution {
+public:
+	vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+		unordered_map<int, int> map1, map2;
+		for (auto i : nums1) map1[i]++;
+		for (auto i : nums2) map2[i]++;
+		vector<int> result;
+		for (auto i = map1.begin(); i != map1.end(); i++) {
+			int count = min(i->second, map2[i->first]);
+			for (int j = 0; j < count; j++)
+				result.push_back(i->first);
+		}
+		return result;
+
+	}
+};
+
 class Solution {
 public:
 	vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {

@@ -519,6 +519,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary Search", "Binary Sea
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Remove Duplicate Letters", "Remove Duplicate Letters\Remove Duplicate Letters.vcxproj", "{3995A04A-3D8B-421F-BA20-A6B84A42802A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "277. Find the Celebrity", "277. Find the Celebrity\277. Find the Celebrity.vcxproj", "{DC91F9B1-3A14-457B-AFF6-5677D82D9893}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "639. Decode Ways II", "639. Decode Ways II\639. Decode Ways II.vcxproj", "{A4089EBA-CE00-4F08-B2A6-C1482043FA25}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "158. Read N Characters Given Read4 II", "158. Read N Characters Given Read4 II\158. Read N Characters Given Read4 II.vcxproj", "{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "159. Longest Substring with At Most Two Distinct Character", "159. Longest Substring with At Most Two Distinct Character\159. Longest Substring with At Most Two Distinct Character.vcxproj", "{F6ED7029-9CE4-4D28-87C2-2565313C7D20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -2567,6 +2575,38 @@ Global
 		{3995A04A-3D8B-421F-BA20-A6B84A42802A}.Release|x64.Build.0 = Release|x64
 		{3995A04A-3D8B-421F-BA20-A6B84A42802A}.Release|x86.ActiveCfg = Release|Win32
 		{3995A04A-3D8B-421F-BA20-A6B84A42802A}.Release|x86.Build.0 = Release|Win32
+		{DC91F9B1-3A14-457B-AFF6-5677D82D9893}.Debug|x64.ActiveCfg = Debug|x64
+		{DC91F9B1-3A14-457B-AFF6-5677D82D9893}.Debug|x64.Build.0 = Debug|x64
+		{DC91F9B1-3A14-457B-AFF6-5677D82D9893}.Debug|x86.ActiveCfg = Debug|Win32
+		{DC91F9B1-3A14-457B-AFF6-5677D82D9893}.Debug|x86.Build.0 = Debug|Win32
+		{DC91F9B1-3A14-457B-AFF6-5677D82D9893}.Release|x64.ActiveCfg = Release|x64
+		{DC91F9B1-3A14-457B-AFF6-5677D82D9893}.Release|x64.Build.0 = Release|x64
+		{DC91F9B1-3A14-457B-AFF6-5677D82D9893}.Release|x86.ActiveCfg = Release|Win32
+		{DC91F9B1-3A14-457B-AFF6-5677D82D9893}.Release|x86.Build.0 = Release|Win32
+		{A4089EBA-CE00-4F08-B2A6-C1482043FA25}.Debug|x64.ActiveCfg = Debug|x64
+		{A4089EBA-CE00-4F08-B2A6-C1482043FA25}.Debug|x64.Build.0 = Debug|x64
+		{A4089EBA-CE00-4F08-B2A6-C1482043FA25}.Debug|x86.ActiveCfg = Debug|Win32
+		{A4089EBA-CE00-4F08-B2A6-C1482043FA25}.Debug|x86.Build.0 = Debug|Win32
+		{A4089EBA-CE00-4F08-B2A6-C1482043FA25}.Release|x64.ActiveCfg = Release|x64
+		{A4089EBA-CE00-4F08-B2A6-C1482043FA25}.Release|x64.Build.0 = Release|x64
+		{A4089EBA-CE00-4F08-B2A6-C1482043FA25}.Release|x86.ActiveCfg = Release|Win32
+		{A4089EBA-CE00-4F08-B2A6-C1482043FA25}.Release|x86.Build.0 = Release|Win32
+		{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}.Debug|x64.ActiveCfg = Debug|x64
+		{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}.Debug|x64.Build.0 = Debug|x64
+		{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}.Debug|x86.ActiveCfg = Debug|Win32
+		{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}.Debug|x86.Build.0 = Debug|Win32
+		{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}.Release|x64.ActiveCfg = Release|x64
+		{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}.Release|x64.Build.0 = Release|x64
+		{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}.Release|x86.ActiveCfg = Release|Win32
+		{4B8921E6-3C77-43DE-90E2-C3F0CD8CCD02}.Release|x86.Build.0 = Release|Win32
+		{F6ED7029-9CE4-4D28-87C2-2565313C7D20}.Debug|x64.ActiveCfg = Debug|x64
+		{F6ED7029-9CE4-4D28-87C2-2565313C7D20}.Debug|x64.Build.0 = Debug|x64
+		{F6ED7029-9CE4-4D28-87C2-2565313C7D20}.Debug|x86.ActiveCfg = Debug|Win32
+		{F6ED7029-9CE4-4D28-87C2-2565313C7D20}.Debug|x86.Build.0 = Debug|Win32
+		{F6ED7029-9CE4-4D28-87C2-2565313C7D20}.Release|x64.ActiveCfg = Release|x64
+		{F6ED7029-9CE4-4D28-87C2-2565313C7D20}.Release|x64.Build.0 = Release|x64
+		{F6ED7029-9CE4-4D28-87C2-2565313C7D20}.Release|x86.ActiveCfg = Release|Win32
+		{F6ED7029-9CE4-4D28-87C2-2565313C7D20}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

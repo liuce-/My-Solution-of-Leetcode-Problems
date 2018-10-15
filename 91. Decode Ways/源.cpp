@@ -20,8 +20,50 @@
 #include<vector>
 #include<string>
 using namespace std;
+class Solution1 {
+public:
+	int numDecodings(string s) {
+		if (s == "")
+			return 0;
+		vector<int> dp(s.size() + 1, 0);
+		dp[0] = 1;
+		dp[1] = s[0] != '0';
+		for (int i = 1; i < s.size(); i++) {
+			if (s[i] != '0')
+				dp[i + 1] = dp[i];
+			int tmp = stoi(s.substr(i - 1, 2));
 
-class Solution {
+			if (tmp >= 10 && tmp <= 26)
+				dp[i + 1] += dp[i - 1];
+		}
+		return dp.back();
+
+	}
+};
+class Solution2 {
+public:
+	int numDecodings(string s) {
+		if (s == "")
+			return 0;
+		int res1 = s[0] != '0';
+		int res2 = 1;
+		for (int i = 1; i < s.size(); i++) {
+			swap(res1, res2);
+			if (s[i] == '0')
+				res1 = 0;
+			else
+				res1 = res2;
+			int tmp = stoi(s.substr(i - 1, 2));
+
+			if (tmp >= 10 && tmp <= 26)
+				res1 += res2;
+
+		}
+		return res1;
+
+	}
+};
+class Solution3 {
 	vector<int> result;
 public:
 	int checksingle(char c) {
@@ -55,3 +97,8 @@ public:
 
 	}
 };
+int main() {
+	Solution2 s;
+	s.numDecodings("01");
+	return 0;
+}

@@ -8,9 +8,11 @@
 //
 //Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 //
+#include<iostream>
 #include<string>
 #include<vector>
-#include<iostream>
+#include<unordered_set>
+#include<algorithm>
 using namespace std;
 class Solution {
 public:
@@ -69,9 +71,28 @@ public:
 		return result;
 	}
 };
+class Solution3 {
+public:
+	int lengthOfLongestSubstring(string s) {
+		int left = 0;
+		int right = -1;//[left,right]
+		int result = 0;
+		unordered_set<char> set;
+		while (right+1 < (int)s.size()) {
+			if ( set.find(s[++right]) != set.end()) {
+				while (set.find(s[right]) != set.end())
+					set.erase(s[left++]);
+			}
+			set.insert(s[right]);
+			result = max(right - left + 1, result);
+
+		}
+		return result;
+	}
+};
 int main() {
-	string s = "abcabcbb";
-	Solution2 test;
+	string s = "bbbbb";
+	Solution3 test;
 	std::cout<<test.lengthOfLongestSubstring(s);
 	system("pause");
 	return 0;
